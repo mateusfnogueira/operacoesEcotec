@@ -52,6 +52,9 @@
               ETA
             </th>
             <th class="text-left">
+              ETB
+            </th>
+            <th class="text-left">
               Inspetora
             </th>
             <th class="text-left">
@@ -87,8 +90,14 @@
             <td>{{ operation.destino }}</td>
             <td>{{ operation.agencia }}</td>
             <td>{{ operation.eta }}</td>
+            <td>{{ operation.etb }}</td>
             <td>{{ operation.inspetora }}</td>
             <td>{{ operation.despachante }}</td>
+            <td>
+              <v-icon color="white" @click="delOperacao(index)"
+                >mdi-trash-can</v-icon
+              >
+            </td>
           </tr>
         </tbody>
       </template>
