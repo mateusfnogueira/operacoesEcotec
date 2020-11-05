@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import action from './action'
 import operations from './modules/operacoes'
 import parametro from './modules/pametro'
 
@@ -11,8 +12,7 @@ export default new Vuex.Store({
   },
   mutations: {
   },
-  actions: {
-  },
+  action,
   modules: {
     operations,
     parametro

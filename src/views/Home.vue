@@ -257,6 +257,8 @@ export default {
         despachante: this.operation.despachante,
         completed: this.operation.completed,
       });
+      this.$http.post('operacaoNavio.json', this.operation)
+
       this.operation = {
         os: "",
         navio: "",

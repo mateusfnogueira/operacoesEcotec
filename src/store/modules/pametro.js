@@ -4,7 +4,7 @@ export default {
     },
     mutations: {
         setCompleted(state, operation) {
-            state.completed = operation
+            state.completed = operation;
         }
     }
 }

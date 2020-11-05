@@ -2,6 +2,8 @@
   <v-row class="flex-column" no-gutters>
     <h1>Programação de Operações (Navios)</h1>
 
+    <v-btn @click.stop="loadNavio()">Carregar Dados</v-btn>
+
     <v-simple-table dark>
       <template v-slot:default>
         <thead>
@@ -111,6 +113,7 @@ import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
+      operation: [],
       //   operations: [
       //     { navio: "eu", terminal: "ele", responsavel: "tu", completed: false },
       //     { navio: "ela", terminal: "eu", responsavel: "voce", completed: false },
@@ -120,7 +123,16 @@ export default {
   },
 
   methods: {
-    ...mapActions("operations", ["delOperacao", "updOperacao"]),
+    ...mapActions("operations", ["delOperacao", "updOperacao", "loadNavio"]),
+    // carregarDados() {
+    //     this.$http.get('operacaoNavio.json').then(res => {
+    //         this.operation = res.data
+    //         console.log(this.operation)
+    //     })
+    // }
+    loadNavio() {
+      this.loadNavio();
+    },
   },
 
   computed: {
